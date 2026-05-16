@@ -559,7 +559,188 @@
     margin: 12px 0 20px;
   }
 
-  /* ===== SCROLL ANIMATIONS ===== */
+  /* ===== GUARANTEE SECTION ===== */
+  .guarantee {
+    background: var(--navy);
+    padding: 64px 0;
+  }
+  .guarantee__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  @media(max-width:680px){ .guarantee__inner { grid-template-columns: 1fr; gap: 32px; } }
+  .guarantee__left h2 { color: var(--white); margin-bottom: 14px; }
+  .guarantee__left p { color: rgba(255,255,255,0.72); font-size: 1rem; }
+  .guarantee__items { display: flex; flex-direction: column; gap: 16px; }
+  .guarantee__item {
+    display: flex; align-items: flex-start; gap: 14px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-left: 4px solid #25D366;
+    border-radius: 8px;
+    padding: 16px 18px;
+  }
+  .guarantee__item-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 1px; }
+  .guarantee__item-text strong { display: block; color: var(--white); font-family: var(--font-h); font-size: 0.95rem; margin-bottom: 3px; letter-spacing: 0.3px; }
+  .guarantee__item-text span { color: rgba(255,255,255,0.6); font-size: 0.85rem; }
+
+  /* ===== FOUNDER SECTION ===== */
+  .founder {
+    background: var(--offwhite);
+    padding: 72px 0;
+  }
+  .founder__inner {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 52px;
+    align-items: center;
+  }
+  @media(max-width:720px){ .founder__inner { grid-template-columns: 1fr; gap: 32px; } }
+  .founder__photo-wrap { position: relative; }
+  .founder__photo {
+    width: 100%; aspect-ratio: 3/4;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 8px 32px rgba(26,35,126,0.2);
+    background: linear-gradient(160deg, var(--sky) 0%, var(--navy) 100%);
+    display: flex; align-items: center; justify-content: center;
+    min-height: 320px;
+  }
+  .founder__photo-placeholder {
+    text-align: center; color: rgba(255,255,255,0.7);
+  }
+  .founder__photo-placeholder .icon { font-size: 4rem; display: block; margin-bottom: 12px; }
+  .founder__photo-placeholder p { font-size: 0.78rem; letter-spacing: 1px; font-family: var(--font-h); }
+  .founder__badge {
+    position: absolute; bottom: -14px; left: 50%; transform: translateX(-50%);
+    background: var(--accent);
+    color: white;
+    font-family: var(--font-h);
+    font-size: 0.72rem;
+    letter-spacing: 1.5px;
+    padding: 6px 18px;
+    border-radius: 20px;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(255,111,0,0.4);
+  }
+  .founder__content { padding-bottom: 8px; }
+  .founder__content h2 { color: var(--navy); margin-bottom: 6px; }
+  .founder__content h3 { color: var(--sky); font-size: 1rem; margin-bottom: 20px; font-family: var(--font-b); font-weight: 600; }
+  .founder__text { color: var(--text); font-size: 0.98rem; margin-bottom: 16px; }
+  .founder__quote {
+    border-left: 4px solid var(--sky);
+    padding: 14px 20px;
+    background: white;
+    border-radius: 0 8px 8px 0;
+    margin: 22px 0;
+    font-style: italic;
+    color: var(--navy);
+    font-size: 1rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .founder__cta { margin-top: 24px; }
+
+  /* ===== CLIENT FILTER BAR ===== */
+  .filter-bar {
+    background: #FFF8E1;
+    border-top: 3px solid #FFB300;
+    border-bottom: 3px solid #FFB300;
+    padding: 18px 20px;
+  }
+  .filter-bar__inner {
+    max-width: 1100px; margin: 0 auto;
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+    justify-content: center;
+  }
+  .filter-bar__icon { font-size: 1.3rem; flex-shrink: 0; }
+  .filter-bar__text {
+    font-family: var(--font-h);
+    font-size: 0.88rem;
+    color: #6D4C00;
+    letter-spacing: 0.3px;
+    text-align: center;
+  }
+  .filter-bar__text strong { color: #4E3500; }
+
+  /* ===== PORTFOLIO NOTE ===== */
+  .portfolio__note {
+    margin-top: 24px;
+    padding: 14px 20px;
+    background: rgba(21,101,192,0.06);
+    border: 1.5px dashed rgba(21,101,192,0.25);
+    border-radius: 8px;
+    display: flex; align-items: center; gap: 10px;
+    color: var(--gray);
+    font-size: 0.88rem;
+  }
+  .portfolio__note span { font-size: 1.2rem; }
+
+  /* ===== DIFFERENTIATOR ROW ===== */
+  .diff-row {
+    background: var(--white);
+    border-top: 1px solid rgba(0,0,0,0.06);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    padding: 16px 0;
+  }
+  .diff-row__inner {
+    max-width: 1100px; margin: 0 auto; padding: 0 20px;
+    display: flex; align-items: center; justify-content: center;
+    gap: 10px; flex-wrap: wrap;
+    text-align: center;
+  }
+  .diff-row__label {
+    font-family: var(--font-h);
+    font-size: 0.82rem;
+    color: var(--navy);
+    letter-spacing: 0.5px;
+  }
+  .diff-sep { color: rgba(0,0,0,0.2); }
+
+  /* ===== CONTACT WA BLOCK (replaces form) ===== */
+  .contact__wa-block {
+    background: var(--offwhite);
+    border-radius: var(--radius);
+    padding: 36px 28px;
+    display: flex; flex-direction: column; gap: 20px;
+    border: 2px solid rgba(37,211,102,0.2);
+  }
+  .contact__wa-block h3 { color: var(--navy); margin-bottom: 4px; }
+  .contact__wa-block p { color: var(--gray); font-size: 0.95rem; }
+  .wa-option {
+    display: flex; align-items: center; gap: 14px;
+    background: white;
+    border-radius: 8px;
+    padding: 16px 18px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    transition: box-shadow .18s;
+    text-decoration: none;
+    border: 1.5px solid rgba(37,211,102,0.15);
+  }
+  .wa-option:hover { box-shadow: 0 4px 18px rgba(37,211,102,0.2); border-color: rgba(37,211,102,0.4); }
+  .wa-option__icon {
+    width: 48px; height: 48px; flex-shrink: 0;
+    background: #25D366;
+    border-radius: 50%;
+    display: grid; place-items: center;
+  }
+  .wa-option__icon svg { width: 26px; height: 26px; fill: white; }
+  .wa-option__text strong { display: block; color: var(--navy); font-family: var(--font-h); font-size: 0.95rem; margin-bottom: 3px; }
+  .wa-option__text span { color: var(--gray); font-size: 0.82rem; }
+  .contact__phone-row {
+    display: flex; flex-direction: column; gap: 10px;
+    padding-top: 4px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+  }
+  .contact__phone-row a {
+    display: flex; align-items: center; gap: 10px;
+    color: var(--navy); font-family: var(--font-h); font-size: 0.95rem;
+    transition: color .18s;
+  }
+  .contact__phone-row a:hover { color: var(--sky); }
+
+
   .reveal { opacity: 0; transform: translateY(28px); transition: opacity .55s ease, transform .55s ease; }
   .reveal.visible { opacity: 1; transform: none; }
   .reveal-d1 { transition-delay: .1s; }
@@ -608,13 +789,13 @@
       ÉQUIPE DISPONIBLE — SÉNÉGAL
     </div>
     <h1>Entreprise de plomberie <em>professionnelle</em> au Sénégal</h1>
-    <p class="hero__sub">15 techniciens qualifiés. Intervention rapide à Dakar, Sebikotane, Touba et partout au Sénégal. Sérieux, fiable et respectueux des délais.</p>
+    <p class="hero__sub">Une équipe structurée de 15 techniciens. Pas d'artisan informel — une <strong style="color:var(--water);">vraie entreprise</strong>, avec un chef de chantier présent, un devis écrit, et zéro coût caché.</p>
     <div class="hero__ctas">
-      <a href="https://wa.me/221783687708?text=Bonjour%20Ladiane%20Plomberie%2C%20je%20souhaite%20un%20devis." target="_blank" class="btn btn--whatsapp">
+      <a href="https://wa.me/221783687708?text=Bonjour%20Ladiane%20Plomberie%2C%20je%20souhaite%20envoyer%20mon%20plan%20et%20avoir%20un%20devis." target="_blank" class="btn btn--whatsapp">
         <svg width="18" height="18" viewBox="0 0 32 32" fill="white"><path d="M16.003 3C9.376 3 4 8.374 4 15c0 2.387.693 4.618 1.893 6.5L4 29l7.757-1.861A11.943 11.943 0 0016.003 28C22.628 28 28 22.627 28 16.001 28 9.374 22.628 3 16.003 3zm0 21.937a9.89 9.89 0 01-5.064-1.392l-.363-.215-4.604 1.106 1.135-4.487-.237-.376a9.892 9.892 0 01-1.532-5.282c0-5.47 4.452-9.923 9.924-9.923 5.47 0 9.924 4.453 9.924 9.923 0 5.472-4.454 9.646-9.183 9.646zm5.452-7.44c-.3-.148-1.77-.871-2.044-.97-.273-.1-.472-.148-.67.149-.2.296-.77.968-.944 1.168-.174.198-.347.222-.646.074-.298-.148-1.26-.464-2.4-1.48-.888-.79-1.487-1.765-1.661-2.064-.174-.297-.019-.458.13-.606.134-.132.3-.346.447-.52.148-.173.197-.297.297-.494.1-.198.05-.372-.025-.52-.074-.149-.67-1.61-.918-2.207-.241-.58-.487-.5-.67-.51l-.57-.01c-.197 0-.52.074-.793.372s-1.04 1.015-1.04 2.477 1.065 2.873 1.213 3.072c.148.197 2.098 3.2 5.083 4.488.71.306 1.265.49 1.697.627.713.226 1.362.194 1.876.118.572-.085 1.77-.722 2.02-1.42.247-.698.247-1.297.173-1.42-.074-.124-.272-.198-.57-.346z"/></svg>
-        Demander un devis sur WhatsApp
+        Envoyer votre plan sur WhatsApp
       </a>
-      <a href="tel:+221783687708" class="btn btn--phone">📞 Appeler maintenant</a>
+      <a href="https://wa.me/221783687708?text=Bonjour%2C%20je%20voudrais%20parler%20directement%20avec%20Ladiane%20Plomberie." target="_blank" class="btn btn--outline">💬 Parler directement sur WhatsApp</a>
     </div>
     <div class="hero__stats">
       <div class="hero__stat"><strong>15</strong><span>Techniciens</span></div>
@@ -635,14 +816,29 @@
   </div>
 </div>
 
+<!-- ===== DIFFERENTIATOR ROW ===== -->
+<div class="diff-row">
+  <div class="diff-row__inner">
+    <span class="diff-row__label">✦ Pas un artisan informel</span>
+    <span class="diff-sep">|</span>
+    <span class="diff-row__label">✦ Équipe structurée de 15 personnes</span>
+    <span class="diff-sep">|</span>
+    <span class="diff-row__label">✦ Chef de chantier présent sur site</span>
+    <span class="diff-sep">|</span>
+    <span class="diff-row__label">✦ Devis écrit avant tout travail</span>
+    <span class="diff-sep">|</span>
+    <span class="diff-row__label">✦ Collaboration professionnelle uniquement</span>
+  </div>
+</div>
+
 <!-- ===== WHY ===== -->
 <section class="section section--light" id="pourquoi">
   <div class="container">
     <div class="section-header reveal">
       <span class="section-label">Pourquoi nous choisir</span>
-      <h2>Une entreprise sérieuse dans un secteur informel</h2>
+      <h2>La différence entre nous et les autres</h2>
       <div class="divider"></div>
-      <p>Dans un marché où la confiance est rare, Ladiane Plomberie se distingue par son professionnalisme, sa structure et son engagement.</p>
+      <p>Au Sénégal, beaucoup travaillent de manière informelle. Nous avons fait le choix inverse : une structure professionnelle, une équipe formée, et un engagement écrit avant chaque chantier.</p>
     </div>
     <div class="why__grid">
       <div class="why__card reveal reveal-d1">
@@ -668,6 +864,74 @@
     </div>
   </div>
 </section>
+
+<!-- ===== TRUST GUARANTEE ===== -->
+<section class="guarantee" id="garanties">
+  <div class="container">
+    <div class="guarantee__inner">
+      <div class="guarantee__left reveal">
+        <span class="section-label">Nos engagements</span>
+        <h2>Ce que vous pouvez attendre de nous — par écrit</h2>
+        <div class="divider"></div>
+        <p>Nous comprenons vos craintes. Beaucoup ont été déçus par des prestataires qui ne respectent pas leurs promesses. C'est pourquoi nous travaillons différemment.</p>
+        <br>
+        <a href="https://wa.me/221783687708?text=Bonjour%2C%20je%20voudrais%20en%20savoir%20plus%20sur%20vos%20garanties." target="_blank" class="btn btn--whatsapp" style="margin-top:8px;">
+          <svg width="17" height="17" viewBox="0 0 32 32" fill="white"><path d="M16.003 3C9.376 3 4 8.374 4 15c0 2.387.693 4.618 1.893 6.5L4 29l7.757-1.861A11.943 11.943 0 0016.003 28C22.628 28 28 22.627 28 16.001 28 9.374 22.628 3 16.003 3zm0 21.937a9.89 9.89 0 01-5.064-1.392l-.363-.215-4.604 1.106 1.135-4.487-.237-.376a9.892 9.892 0 01-1.532-5.282c0-5.47 4.452-9.923 9.924-9.923 5.47 0 9.924 4.453 9.924 9.923 0 5.472-4.454 9.646-9.183 9.646zm5.452-7.44c-.3-.148-1.77-.871-2.044-.97-.273-.1-.472-.148-.67.149-.2.296-.77.968-.944 1.168-.174.198-.347.222-.646.074-.298-.148-1.26-.464-2.4-1.48-.888-.79-1.487-1.765-1.661-2.064-.174-.297-.019-.458.13-.606.134-.132.3-.346.447-.52.148-.173.197-.297.297-.494.1-.198.05-.372-.025-.52-.074-.149-.67-1.61-.918-2.207-.241-.58-.487-.5-.67-.51l-.57-.01c-.197 0-.52.074-.793.372s-1.04 1.015-1.04 2.477 1.065 2.873 1.213 3.072c.148.197 2.098 3.2 5.083 4.488.71.306 1.265.49 1.697.627.713.226 1.362.194 1.876.118.572-.085 1.77-.722 2.02-1.42.247-.698.247-1.297.173-1.42-.074-.124-.272-.198-.57-.346z"/></svg>
+          Posez-nous vos questions
+        </a>
+      </div>
+      <div class="guarantee__items reveal">
+        <div class="guarantee__item">
+          <div class="guarantee__item-icon">📋</div>
+          <div class="guarantee__item-text">
+            <strong>Devis clair avant tout travail</strong>
+            <span>Vous recevez un devis détaillé et compréhensible avant que nous ne commencions quoi que ce soit.</span>
+          </div>
+        </div>
+        <div class="guarantee__item">
+          <div class="guarantee__item-icon">🚫</div>
+          <div class="guarantee__item-text">
+            <strong>Aucun coût caché</strong>
+            <span>Le prix convenu est le prix final. Aucune surprise à la fin du chantier.</span>
+          </div>
+        </div>
+        <div class="guarantee__item">
+          <div class="guarantee__item-icon">✅</div>
+          <div class="guarantee__item-text">
+            <strong>Validation avant intervention</strong>
+            <span>Vous validez le devis et les conditions avant que notre équipe arrive sur place.</span>
+          </div>
+        </div>
+        <div class="guarantee__item">
+          <div class="guarantee__item-icon">🤝</div>
+          <div class="guarantee__item-text">
+            <strong>Respect des engagements des deux côtés</strong>
+            <span>Nous respectons nos délais et nos prix. Nous attendons la même sériosité de nos clients.</span>
+          </div>
+        </div>
+        <div class="guarantee__item">
+          <div class="guarantee__item-icon">👷</div>
+          <div class="guarantee__item-text">
+            <strong>Chef de chantier présent sur site</strong>
+            <span>Un responsable supervise chaque chantier du début à la livraison finale.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CLIENT FILTER BAR ===== -->
+<div class="filter-bar">
+  <div class="filter-bar__inner">
+    <span class="filter-bar__icon">⚠️</span>
+    <p class="filter-bar__text">
+      <strong>Nous travaillons uniquement avec des clients sérieux.</strong>
+      Nos devis sont gratuits et nos engagements sont fermes — nous attendons la même rigueur de votre côté.
+      Si vous cherchez un travail rapide et bon marché sans contrat, nous ne sommes pas le bon prestataire.
+    </p>
+  </div>
+</div>
 
 <!-- ===== SERVICES ===== -->
 <section class="section" id="services">
@@ -718,6 +982,44 @@
   </div>
 </section>
 
+<!-- ===== FOUNDER ===== -->
+<section class="founder" id="equipe">
+  <div class="container">
+    <div class="founder__inner">
+      <div class="founder__photo-wrap reveal">
+        <div class="founder__photo">
+          <div class="founder__photo-placeholder">
+            <span class="icon">👷</span>
+            <p>PHOTO À VENIR</p>
+            <p style="font-size:0.65rem;opacity:0.6;margin-top:6px;">Remplacer par photo réelle</p>
+          </div>
+        </div>
+        <span class="founder__badge">✦ Chef d'entreprise &amp; Chef de chantier</span>
+      </div>
+      <div class="founder__content reveal">
+        <span class="section-label">L'homme derrière l'entreprise</span>
+        <h2>Un responsable présent sur chaque chantier</h2>
+        <h3>Fondateur de Ladiane Plomberie · Plus de 10 ans d'expérience</h3>
+        <p class="founder__text">
+          J'ai créé Ladiane Plomberie parce que j'en avais assez de voir des clients déçus par des artisans qui disparaissent en plein chantier ou qui gonflent les prix à la fin. Dans ce métier, la confiance se mérite.
+        </p>
+        <p class="founder__text">
+          Aujourd'hui, notre équipe de 15 techniciens intervient sur des chantiers dans tout le Sénégal — villas, immeubles, bâtiments industriels. Et sur chaque chantier, <strong>il y a toujours un responsable présent</strong> pour garantir la qualité du travail.
+        </p>
+        <div class="founder__quote">
+          "Je ne confie pas un chantier à une équipe sans supervision. Mon nom est engagé sur chaque réalisation, et je le prends au sérieux."
+        </div>
+        <div class="founder__cta">
+          <a href="https://wa.me/221783687708?text=Bonjour%2C%20je%20voudrais%20discuter%20directement%20de%20mon%20projet%20avec%20vous." target="_blank" class="btn btn--whatsapp">
+            <svg width="17" height="17" viewBox="0 0 32 32" fill="white"><path d="M16.003 3C9.376 3 4 8.374 4 15c0 2.387.693 4.618 1.893 6.5L4 29l7.757-1.861A11.943 11.943 0 0016.003 28C22.628 28 28 22.627 28 16.001 28 9.374 22.628 3 16.003 3zm0 21.937a9.89 9.89 0 01-5.064-1.392l-.363-.215-4.604 1.106 1.135-4.487-.237-.376a9.892 9.892 0 01-1.532-5.282c0-5.47 4.452-9.923 9.924-9.923 5.47 0 9.924 4.453 9.924 9.923 0 5.472-4.454 9.646-9.183 9.646zm5.452-7.44c-.3-.148-1.77-.871-2.044-.97-.273-.1-.472-.148-.67.149-.2.296-.77.968-.944 1.168-.174.198-.347.222-.646.074-.298-.148-1.26-.464-2.4-1.48-.888-.79-1.487-1.765-1.661-2.064-.174-.297-.019-.458.13-.606.134-.132.3-.346.447-.52.148-.173.197-.297.297-.494.1-.198.05-.372-.025-.52-.074-.149-.67-1.61-.918-2.207-.241-.58-.487-.5-.67-.51l-.57-.01c-.197 0-.52.074-.793.372s-1.04 1.015-1.04 2.477 1.065 2.873 1.213 3.072c.148.197 2.098 3.2 5.083 4.488.71.306 1.265.49 1.697.627.713.226 1.362.194 1.876.118.572-.085 1.77-.722 2.02-1.42.247-.698.247-1.297.173-1.42-.074-.124-.272-.198-.57-.346z"/></svg>
+            Parler directement sur WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== PORTFOLIO ===== -->
 <section class="section section--light" id="realisations">
   <div class="container">
@@ -749,8 +1051,11 @@
           <h3>Installation industrielle – Sebikotane</h3>
         </div>
       </div>
+      <div class="portfolio__note reveal">
+        <span>📸</span>
+        <span>Photos de chantiers réels (à venir) — Cette section sera mise à jour avec les photos officielles de nos réalisations. Contactez-nous sur WhatsApp pour voir des exemples récents directement.</span>
+      </div>
     </div>
-  </div>
 </section>
 
 <!-- ===== PROCESS ===== -->
@@ -836,15 +1141,15 @@
 <!-- ===== CTA BAND ===== -->
 <section class="cta-band" id="devis">
   <div class="container">
-    <span class="section-label" style="color:rgba(255,255,255,0.7);">On s'en occupe</span>
-    <h2>Besoin d'un plombier sérieux au Sénégal ?</h2>
-    <p>Ne perdez plus de temps avec des artisans peu fiables. Contactez une équipe structurée et professionnelle dès maintenant.</p>
+    <span class="section-label" style="color:rgba(255,255,255,0.7);">Prêt à démarrer ?</span>
+    <h2>Vous cherchez un plombier sérieux au Sénégal ?</h2>
+    <p>Envoyez-nous votre plan ou décrivez votre besoin sur WhatsApp. Devis gratuit sous 24–48h. Aucun engagement avant votre validation.</p>
     <div class="cta-band__btns">
-      <a href="https://wa.me/221783687708?text=Bonjour%20Ladiane%20Plomberie%2C%20je%20voudrais%20un%20devis." target="_blank" class="btn btn--whatsapp" style="font-size:1.05rem;padding:16px 30px;">
+      <a href="https://wa.me/221783687708?text=Bonjour%20Ladiane%20Plomberie%2C%20je%20voudrais%20envoyer%20mon%20plan%20pour%20un%20devis." target="_blank" class="btn btn--whatsapp" style="font-size:1.05rem;padding:16px 30px;">
         <svg width="20" height="20" viewBox="0 0 32 32" fill="white"><path d="M16.003 3C9.376 3 4 8.374 4 15c0 2.387.693 4.618 1.893 6.5L4 29l7.757-1.861A11.943 11.943 0 0016.003 28C22.628 28 28 22.627 28 16.001 28 9.374 22.628 3 16.003 3zm0 21.937a9.89 9.89 0 01-5.064-1.392l-.363-.215-4.604 1.106 1.135-4.487-.237-.376a9.892 9.892 0 01-1.532-5.282c0-5.47 4.452-9.923 9.924-9.923 5.47 0 9.924 4.453 9.924 9.923 0 5.472-4.454 9.646-9.183 9.646zm5.452-7.44c-.3-.148-1.77-.871-2.044-.97-.273-.1-.472-.148-.67.149-.2.296-.77.968-.944 1.168-.174.198-.347.222-.646.074-.298-.148-1.26-.464-2.4-1.48-.888-.79-1.487-1.765-1.661-2.064-.174-.297-.019-.458.13-.606.134-.132.3-.346.447-.52.148-.173.197-.297.297-.494.1-.198.05-.372-.025-.52-.074-.149-.67-1.61-.918-2.207-.241-.58-.487-.5-.67-.51l-.57-.01c-.197 0-.52.074-.793.372s-1.04 1.015-1.04 2.477 1.065 2.873 1.213 3.072c.148.197 2.098 3.2 5.083 4.488.71.306 1.265.49 1.697.627.713.226 1.362.194 1.876.118.572-.085 1.77-.722 2.02-1.42.247-.698.247-1.297.173-1.42-.074-.124-.272-.198-.57-.346z"/></svg>
-        Demander un devis gratuit
+        Envoyer votre plan sur WhatsApp
       </a>
-      <a href="tel:+221783687708" class="btn btn--outline" style="font-size:1.05rem;padding:16px 30px;">📞 78 368 77 08</a>
+      <a href="tel:+221783687708" class="btn btn--outline" style="font-size:1.05rem;padding:16px 30px;">📞 Appeler directement</a>
     </div>
   </div>
 </section>
@@ -856,27 +1161,11 @@
       <span class="section-label">Nous contacter</span>
       <h2>Parlons de votre projet</h2>
       <div class="divider"></div>
+      <p style="color:var(--gray);">Le plus simple : envoyez-nous un message WhatsApp avec votre besoin ou vos plans. Nous revenons vers vous rapidement.</p>
     </div>
     <div class="contact__grid">
       <div class="contact__info reveal">
         <h3>Informations de contact</h3>
-        <div class="contact__item">
-          <div class="contact__item-icon">📞</div>
-          <div class="contact__item-text">
-            <strong>Téléphones</strong>
-            <a href="tel:+221783687708">+221 78 368 77 08</a><br>
-            <a href="tel:+221772943666">+221 77 294 36 66</a>
-          </div>
-        </div>
-        <div class="contact__item">
-          <div class="contact__item-icon">
-            <svg width="20" height="20" viewBox="0 0 32 32" fill="white"><path d="M16.003 3C9.376 3 4 8.374 4 15c0 2.387.693 4.618 1.893 6.5L4 29l7.757-1.861A11.943 11.943 0 0016.003 28C22.628 28 28 22.627 28 16.001 28 9.374 22.628 3 16.003 3zm0 21.937a9.89 9.89 0 01-5.064-1.392l-.363-.215-4.604 1.106 1.135-4.487-.237-.376a9.892 9.892 0 01-1.532-5.282c0-5.47 4.452-9.923 9.924-9.923 5.47 0 9.924 4.453 9.924 9.923 0 5.472-4.454 9.646-9.183 9.646zm5.452-7.44c-.3-.148-1.77-.871-2.044-.97-.273-.1-.472-.148-.67.149-.2.296-.77.968-.944 1.168-.174.198-.347.222-.646.074-.298-.148-1.26-.464-2.4-1.48-.888-.79-1.487-1.765-1.661-2.064-.174-.297-.019-.458.13-.606.134-.132.3-.346.447-.52.148-.173.197-.297.297-.494.1-.198.05-.372-.025-.52-.074-.149-.67-1.61-.918-2.207-.241-.58-.487-.5-.67-.51l-.57-.01c-.197 0-.52.074-.793.372s-1.04 1.015-1.04 2.477 1.065 2.873 1.213 3.072c.148.197 2.098 3.2 5.083 4.488.71.306 1.265.49 1.697.627.713.226 1.362.194 1.876.118.572-.085 1.77-.722 2.02-1.42.247-.698.247-1.297.173-1.42-.074-.124-.272-.198-.57-.346z"/></svg>
-          </div>
-          <div class="contact__item-text">
-            <strong>WhatsApp</strong>
-            <a href="https://wa.me/221783687708" target="_blank">Envoyer un message</a>
-          </div>
-        </div>
         <div class="contact__item">
           <div class="contact__item-icon">📍</div>
           <div class="contact__item-text">
@@ -900,41 +1189,35 @@
         </div>
       </div>
 
-      <div class="contact__form reveal">
-        <h3>Envoyez-nous votre demande</h3>
-        <div class="form-group">
-          <label>Votre nom complet</label>
-          <input type="text" placeholder="Ex : Moussa Ndiaye" autocomplete="name">
-        </div>
-        <div class="form-group">
-          <label>Numéro de téléphone</label>
-          <input type="tel" placeholder="Ex : 77 XXX XX XX" autocomplete="tel">
-        </div>
-        <div class="form-group">
-          <label>Type de service</label>
-          <select>
-            <option value="">-- Choisir un service --</option>
-            <option>Installation sanitaire</option>
-            <option>Dépannage urgent</option>
-            <option>Maintenance</option>
-            <option>Travaux sur plans</option>
-            <option>Chantier neuf</option>
-            <option>Autre</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Ville / Localité</label>
-          <input type="text" placeholder="Ex : Dakar, Thiès, Touba…">
-        </div>
-        <div class="form-group">
-          <label>Décrivez votre besoin</label>
-          <textarea placeholder="Ex : J'ai besoin d'installer 2 salles de bain dans ma villa. Je peux envoyer les plans PDF."></textarea>
-        </div>
-        <a href="https://wa.me/221783687708?text=Bonjour%20Ladiane%20Plomberie%2C%20je%20voudrais%20vous%20contacter%20pour%20un%20projet." target="_blank" class="btn btn--whatsapp" style="width:100%;justify-content:center;">
-          <svg width="18" height="18" viewBox="0 0 32 32" fill="white"><path d="M16.003 3C9.376 3 4 8.374 4 15c0 2.387.693 4.618 1.893 6.5L4 29l7.757-1.861A11.943 11.943 0 0016.003 28C22.628 28 28 22.627 28 16.001 28 9.374 22.628 3 16.003 3zm0 21.937a9.89 9.89 0 01-5.064-1.392l-.363-.215-4.604 1.106 1.135-4.487-.237-.376a9.892 9.892 0 01-1.532-5.282c0-5.47 4.452-9.923 9.924-9.923 5.47 0 9.924 4.453 9.924 9.923 0 5.472-4.454 9.646-9.183 9.646zm5.452-7.44c-.3-.148-1.77-.871-2.044-.97-.273-.1-.472-.148-.67.149-.2.296-.77.968-.944 1.168-.174.198-.347.222-.646.074-.298-.148-1.26-.464-2.4-1.48-.888-.79-1.487-1.765-1.661-2.064-.174-.297-.019-.458.13-.606.134-.132.3-.346.447-.52.148-.173.197-.297.297-.494.1-.198.05-.372-.025-.52-.074-.149-.67-1.61-.918-2.207-.241-.58-.487-.5-.67-.51l-.57-.01c-.197 0-.52.074-.793.372s-1.04 1.015-1.04 2.477 1.065 2.873 1.213 3.072c.148.197 2.098 3.2 5.083 4.488.71.306 1.265.49 1.697.627.713.226 1.362.194 1.876.118.572-.085 1.77-.722 2.02-1.42.247-.698.247-1.297.173-1.42-.074-.124-.272-.198-.57-.346z"/></svg>
-          Envoyer via WhatsApp
+      <div class="contact__wa-block reveal">
+        <h3>Contactez-nous directement</h3>
+        <p>Pas de formulaire. Pas d'attente. Envoyez-nous votre demande sur WhatsApp et recevez une réponse dans les 24h.</p>
+
+        <a href="https://wa.me/221783687708?text=Bonjour%20Ladiane%20Plomberie%2C%20je%20voudrais%20envoyer%20mon%20plan%20pour%20un%20devis." target="_blank" class="wa-option">
+          <div class="wa-option__icon">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.003 3C9.376 3 4 8.374 4 15c0 2.387.693 4.618 1.893 6.5L4 29l7.757-1.861A11.943 11.943 0 0016.003 28C22.628 28 28 22.627 28 16.001 28 9.374 22.628 3 16.003 3zm0 21.937a9.89 9.89 0 01-5.064-1.392l-.363-.215-4.604 1.106 1.135-4.487-.237-.376a9.892 9.892 0 01-1.532-5.282c0-5.47 4.452-9.923 9.924-9.923 5.47 0 9.924 4.453 9.924 9.923 0 5.472-4.454 9.646-9.183 9.646zm5.452-7.44c-.3-.148-1.77-.871-2.044-.97-.273-.1-.472-.148-.67.149-.2.296-.77.968-.944 1.168-.174.198-.347.222-.646.074-.298-.148-1.26-.464-2.4-1.48-.888-.79-1.487-1.765-1.661-2.064-.174-.297-.019-.458.13-.606.134-.132.3-.346.447-.52.148-.173.197-.297.297-.494.1-.198.05-.372-.025-.52-.074-.149-.67-1.61-.918-2.207-.241-.58-.487-.5-.67-.51l-.57-.01c-.197 0-.52.074-.793.372s-1.04 1.015-1.04 2.477 1.065 2.873 1.213 3.072c.148.197 2.098 3.2 5.083 4.488.71.306 1.265.49 1.697.627.713.226 1.362.194 1.876.118.572-.085 1.77-.722 2.02-1.42.247-.698.247-1.297.173-1.42-.074-.124-.272-.198-.57-.346z"/></svg>
+          </div>
+          <div class="wa-option__text">
+            <strong>Envoyer votre plan ou photos</strong>
+            <span>PDF, image, description — tout est accepté. Devis gratuit sous 24–48h.</span>
+          </div>
         </a>
-        <p style="font-size:0.78rem;color:var(--gray);text-align:center;margin-top:8px;">Réponse garantie sous 24h</p>
+
+        <a href="https://wa.me/221783687708?text=Bonjour%2C%20je%20voudrais%20parler%20directement%20avec%20quelqu%27un%20de%20Ladiane%20Plomberie." target="_blank" class="wa-option">
+          <div class="wa-option__icon">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.003 3C9.376 3 4 8.374 4 15c0 2.387.693 4.618 1.893 6.5L4 29l7.757-1.861A11.943 11.943 0 0016.003 28C22.628 28 28 22.627 28 16.001 28 9.374 22.628 3 16.003 3zm0 21.937a9.89 9.89 0 01-5.064-1.392l-.363-.215-4.604 1.106 1.135-4.487-.237-.376a9.892 9.892 0 01-1.532-5.282c0-5.47 4.452-9.923 9.924-9.923 5.47 0 9.924 4.453 9.924 9.923 0 5.472-4.454 9.646-9.183 9.646zm5.452-7.44c-.3-.148-1.77-.871-2.044-.97-.273-.1-.472-.148-.67.149-.2.296-.77.968-.944 1.168-.174.198-.347.222-.646.074-.298-.148-1.26-.464-2.4-1.48-.888-.79-1.487-1.765-1.661-2.064-.174-.297-.019-.458.13-.606.134-.132.3-.346.447-.52.148-.173.197-.297.297-.494.1-.198.05-.372-.025-.52-.074-.149-.67-1.61-.918-2.207-.241-.58-.487-.5-.67-.51l-.57-.01c-.197 0-.52.074-.793.372s-1.04 1.015-1.04 2.477 1.065 2.873 1.213 3.072c.148.197 2.098 3.2 5.083 4.488.71.306 1.265.49 1.697.627.713.226 1.362.194 1.876.118.572-.085 1.77-.722 2.02-1.42.247-.698.247-1.297.173-1.42-.074-.124-.272-.198-.57-.346z"/></svg>
+          </div>
+          <div class="wa-option__text">
+            <strong>Parler directement avec nous</strong>
+            <span>Posez vos questions, expliquez votre projet — réponse rapide garantie.</span>
+          </div>
+        </a>
+
+        <div class="contact__phone-row">
+          <p style="font-size:0.82rem;color:var(--gray);margin-bottom:4px;">Vous préférez appeler ?</p>
+          <a href="tel:+221783687708">📞 +221 78 368 77 08</a>
+          <a href="tel:+221772943666">📞 +221 77 294 36 66</a>
+        </div>
       </div>
     </div>
   </div>
@@ -964,9 +1247,10 @@
         <ul class="footer__links">
           <li><a href="#accueil">Accueil</a></li>
           <li><a href="#pourquoi">Pourquoi nous</a></li>
+          <li><a href="#garanties">Nos garanties</a></li>
           <li><a href="#services">Nos services</a></li>
+          <li><a href="#equipe">Notre équipe</a></li>
           <li><a href="#realisations">Réalisations</a></li>
-          <li><a href="#processus">Comment ça marche</a></li>
           <li><a href="#temoignages">Témoignages</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
